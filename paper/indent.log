@@ -1,0 +1,130 @@
+INFO:  latexindent.pl version 3.19.1, 2022-12-04, a script to indent .tex files
+       latexindent.pl lives here: /usr/local/Cellar/latexindent/3.19.1/libexec/bin/
+       Thu Dec 22 22:37:57 2022
+       Filename: paper/test.tex
+INFO:  Processing switches:
+       -w|--overwrite: Overwrite mode active, will make a back up before overwriting
+       -m|--modifylinebreaks: modify line breaks
+INFO:  Directory for backup files and indent.log:
+       paper
+INFO:  Perl modules are being loaded from the following directories:
+       /usr/local/opt/perl/lib/perl5/5.36/FindBin.pm
+       /usr/local/Cellar/latexindent/3.19.1/libexec/lib/perl5/YAML/Tiny.pm
+       /usr/local/opt/perl/lib/perl5/5.36/File/Copy.pm
+       /usr/local/opt/perl/lib/perl5/5.36/File/Basename.pm
+       /usr/local/opt/perl/lib/perl5/5.36/Getopt/Long.pm
+       /usr/local/Cellar/latexindent/3.19.1/libexec/lib/perl5/File/HomeDir.pm
+INFO:  LatexIndent perl modules are being loaded from, for example:
+       /usr/local/Cellar/latexindent/3.19.1/libexec/lib/perl5/LatexIndent/Document.pm
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from /usr/local/Cellar/latexindent/3.19.1/libexec/bin/defaultSettings.yaml
+INFO:  YAML settings read: indentconfig.yaml or .indentconfig.yaml
+       Home directory is /Users/runner (didn't find either indentconfig.yaml or .indentconfig.yaml)
+       To specify user settings you would put indentconfig.yaml here: /Users/runner/indentconfig.yaml
+       Alternatively, you can use the hidden file .indentconfig.yaml as: /Users/runner/.indentconfig.yaml
+INFO:  -l switch used without filename, will search for the following files in turn:
+       localSettings.yaml,latexindent.yaml,.localSettings.yaml,.latexindent.yaml
+INFO:  YAML settings read: -l switch
+       Multiple localSettings found, separated by commas:
+       localSettings.yaml, latexindent.yaml, .localSettings.yaml, .latexindent.yaml
+       Adding /Users/runner/work/test-latexindent/test-latexindent/localSettings.yaml to YAML read paths
+INFO:  YAML settings, reading from the following files:
+       Reading USER settings from /Users/runner/work/test-latexindent/test-latexindent/localSettings.yaml
+       ---
+       defaultIndent: '  '
+       dos2unixlinebreaks: '1'
+       indentAfterHeadings:
+         chapter:
+           indentAfterThisHeading: '0'
+           level: '2'
+         paragraph:
+           indentAfterThisHeading: '1'
+           level: '6'
+         part:
+           indentAfterThisHeading: '0'
+           level: '1'
+         section:
+           indentAfterThisHeading: '1'
+           level: '3'
+         subparagraph:
+           indentAfterThisHeading: '1'
+           level: '7'
+         subsection:
+           indentAfterThisHeading: '1'
+           level: '4'
+         subsection*:
+           indentAfterThisHeading: '1'
+           level: '4'
+         subsubsection:
+           indentAfterThisHeading: '1'
+           level: '5'
+       indentPreamble: '1'
+       indentRules:
+         chapter: ' '
+         item: '  '
+         paragraph: '  '
+         section: '  '
+         subsection: '  '
+       modifyLineBreaks:
+         commands:
+           label:
+             CommandStartsOnOwnLine: '1'
+         environments:
+           BeginStartsOnOwnLine: '1'
+           BodyStartsOnOwnLine: '2'
+           DBSFinishesWithLineBreak: '1'
+           DBSStartsOnOwnLine: '0'
+           EndFinishesWithLineBreak: '1'
+           EndStartsOnOwnLine: '1'
+           align*:
+             BeginStartsOnOwnLine: '1'
+             BodyStartsOnOwnLine: '1'
+             EndFinishesWithLineBreak: '1'
+             EndStartsOnOwnLine: '1'
+           cases:
+             BeginStartsOnOwnLine: '1'
+             BodyStartsOnOwnLine: '1'
+             EndFinishesWithLineBreak: '1'
+             EndStartsOnOwnLine: '1'
+           equation*:
+             BeginStartsOnOwnLine: '1'
+             BodyStartsOnOwnLine: '1'
+             EndFinishesWithLineBreak: '1'
+             EndStartsOnOwnLine: '1'
+         mandatoryArguments:
+           label:
+             RCuBFinishesWithLineBreak: '1'
+         oneSentencePerLine:
+           manipulateSentences: '1'
+           sentencesBeginWith:
+             other: \$|\\\(
+         specialBeginEnd:
+           displayMath:
+             SpecialBeginStartsOnOwnLine: '1'
+             SpecialBodyStartsOnOwnLine: '1'
+             SpecialEndFinishesWithLineBreak: '1'
+             SpecialEndStartsOnOwnLine: '1'
+           quad:
+             SpecialBeginStartsOnOwnLine: '1'
+             SpecialEndFinishesWithLineBreak: '1'
+       noAdditionalIndent:
+         document: '0'
+       specialBeginEnd:
+         quad:
+           begin: \\q+ua
+           end: d
+           lookForThis: '1'
+
+INFO:  Backup procedure (-w flag active):
+       copying paper/test.tex to paper/test.bak0
+       Backup file: paper/test.bak0
+       paper/test.tex will be overwritten after indentation
+INFO:  Phase 1: searching for objects
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Overwriting file paper/test.tex
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl
