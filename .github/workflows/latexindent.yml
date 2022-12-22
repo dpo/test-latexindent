@@ -19,7 +19,7 @@ jobs:
         shopt -s nullglob  # allow empty loops below
         for f in paper/*.tex; do latexindent -l -m -w $f; done
         for f in paper/*.bib; do latexindent -l -m -w $f; done
-        echo "latexindent_changes=$(git diff --exit-code)" >> $GITHUB_OUTPUT
+        echo "latexindent_changes=$(git diff --quiet)" >> $GITHUB_OUTPUT
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       if: ${{ steps.run-latexindent.outputs.latexindent_changes}} == 1
