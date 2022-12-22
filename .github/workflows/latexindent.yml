@@ -16,6 +16,7 @@ jobs:
     - name: Run latexindent
       id: run-latexindent
       run: |
+        shopt -s nullglob  # allow empty loops below
         for f in paper/*.tex; do latexindent -l -m -w $f; done
         for f in paper/*.bib; do latexindent -l -m -w $f; done
         echo "latexindent_changes=$(git diff --exit-code)" >> $GITHUB_OUTPUT
