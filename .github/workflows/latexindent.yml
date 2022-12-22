@@ -24,4 +24,6 @@ jobs:
       uses: peter-evans/create-pull-request@v4
       if: ${{ steps.run-latexindent.outputs.latexindent_changes}} == 1
       with:
-        paths: paper/*.tex, paper/*.bib
+        add-paths: |
+          paper/*.tex
+          paper/*.bib
