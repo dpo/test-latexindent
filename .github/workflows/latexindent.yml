@@ -20,7 +20,7 @@ jobs:
         for f in paper/*.tex; do latexindent -l -m -w $f; done
         for f in paper/*.bib; do latexindent -l -m -w $f; done
         git diff --quiet
-        echo "latexindent_changes=$?" >> $GITHUB_OUTPUT
+        echo "::set-output latexindent_changes=$?"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
-      if: ${{ steps.run-latexindent.outputs.latexindent_changes}} == '1'
+      if: ${{ steps.run-latexindent.outputs.latexindent_changes}} == 1
